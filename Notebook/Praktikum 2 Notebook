@@ -1,1 +1,46 @@
+from nltk.book import *
 
+#Aufgabe 17
+print(text9.index("sunset"))
+
+#Aufgabe 18
+print(len(sorted(set(sent1 + sent2 + sent3 + sent4 + sent5 + sent6 + sent7 + sent8))))
+
+#Aufgabe 19
+print("sorted(set(w.lower() for w in text1)):", len(sorted(set(w.lower() for w in text1))))
+print("sorted(w.lower() for w in set(text1)):", len(sorted(w.lower() for w in set(text1))))
+
+#Aufgabe 20
+w = 'Hello'
+print(w.isupper())
+print(not w.islower())
+#Aufgabe 21
+print(text2[-2:])
+#Aufgabe 22
+fdist = FreqDist(w for w in text5 if len(w) == 4)      # find all the four-letter words in the Chat Corpus
+print(fdist.most_common())                             # print the words in decreasing order of frequency
+#Aufgabe 23
+words = [w for w in text6 if w.isupper()]             # store the words in a list
+for w in words:                                       # print all the uppercase words, one per line
+    print(w)
+#Aufgabe 24
+a = [w for w in text6 if w.endswith('ize')]
+b = [w for w in text6 if 'z' in w]
+c = [w for w in text6 if 'pt' in w]
+d = [w for w in text6 if w.istitle()]
+#Aufgabe 25
+sent = ['she', 'sells', 'sea', 'shells', 'by', 'the', 'sea', 'shore']
+print([w for w in sent if w.startswith('sh')])
+print([w for w in sent if len(w) > 4])
+#Aufgabe 26
+total_length = sum(len(w) for w in text1)
+total_words = len(text1)
+average_word_length = total_length / total_words
+#Aufgabe 27
+def vocab_size(text):
+    return len(set(text))
+#Aufgabe 28
+def percent(word, text):
+    return 100 * text.count(word) / len(text)
+#Aufgabe 29
+set(sent3) < set(text1)
